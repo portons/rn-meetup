@@ -36,7 +36,6 @@ class WebView extends React.Component {
   }
 
   onPress(event) {
-    console.log('event', event.nativeEvent);
     this.setState({ force: event.nativeEvent.force * 100 });
 
     this.sendMessage({
