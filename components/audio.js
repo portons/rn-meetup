@@ -54,12 +54,12 @@ class Audio extends React.Component {
 
         <TouchableHighlight onPress={ () => this.startListening() }
                             activeOpacity={ 0.5 }>
-          <View style={{ padding: 20, borderWidth: 1, borderColor: '#eee', marginTop: 20, backgroundColor: 'white' }}>
+          <View style={ styles.button }>
             <Text>Start recording</Text>
           </View>
         </TouchableHighlight>
 
-        <View style={{ width: '100%', height: 100, alignItems: 'flex-end', justifyContent: 'center', flexDirection: 'row' }}>
+        <View style={ styles.bars }>
           <View style={{
             width: '5%',
             height: this.state.currentMetering * 0.2,
@@ -94,7 +94,7 @@ class Audio extends React.Component {
 
         <TouchableHighlight onPress={ () => this.stopListening() }
                             activeOpacity={ 0.5 }>
-          <View style={{ padding: 20, borderWidth: 1, borderColor: '#eee', marginTop: 20, backgroundColor: 'white' }}>
+          <View style={ styles.button }>
             <Text>Stop recording</Text>
           </View>
         </TouchableHighlight>
@@ -108,6 +108,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 50
+  },
+  button: {
+    padding: 20,
+    borderWidth: 1,
+    borderColor: '#eee',
+    marginTop: 20,
+    backgroundColor: 'white'
+  },
+  bars: {
+    width: '100%',
+    height: 100,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    flexDirection: 'row'
   }
 });
 
